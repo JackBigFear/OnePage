@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BIG FEAR — “Entry Level” (EP) | Big Fear Records</title>
+<meta name="description" content="BIG FEAR — Entry Level (EP). A synth-throbbing, operatic reckoning with fear curdling into apathy. Out 05 September 2025 on Big Fear Records." />
+<link rel="canonical" href="https://www.bigfear.co.uk/entry-level" />
+
+<style>
+  /* ===== Modern Apple-ish, two-column with right sidebar ===== */
+  :root{
+    --bg:#fff; --text:#111; --muted:#6e6e73;
+    --line:#e6e6e6; --card:#fafafa; --accent:#0A84FF;
+    --radius:16px; --radius-sm:12px; --shadow:0 8px 24px rgba(0,0,0,.06);
+    --max:1100px; --side:340px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);}
+  body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:48px 20px 80px;}
+  header{margin-bottom:24px}
+  .label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  h1{font-weight:700;font-size:44px;letter-spacing:-.02em;margin:6px 0 4px}
+  .subtitle{font-size:20px;color:var(--muted);margin:0 0 18px}
+  .lede{font-size:18px;margin:18px 0 12px}
+  .muted{color:var(--muted)}
+
+  /* Grid with right sidebar */
+  .grid{ display:grid; gap:24px; grid-template-columns: 1fr; }
+  @media (min-width: 980px){ .grid{ grid-template-columns: minmax(0, 1fr) var(--side); } }
+  .maincol{min-width:0}
+  .sidecol{min-width:0}
+  @media (min-width: 980px){ .sidecol{ position:sticky; top:20px; height:max-content; } }
+
+  /* Cards */
+  .card{
+    background:var(--bg); border:1px solid var(--line);
+    border-radius:var(--radius-sm); padding:18px; box-shadow:var(--shadow);
+  }
+  h2{font-size:20px;margin:0 0 12px}
+
+  /* Image grid: two squares with same crop + corners */
+  /* Two squares, left-aligned and tighter spacing */
+.media-grid{
+  display:grid;
+  grid-template-columns: 1fr;   /* stack on mobile */
+  gap:8px;
+  margin:8px 0 16px 0;          /* no extra left offset */
+  justify-content:start;
+  width:100%;
+}
+@media (min-width:700px){
+  .media-grid{ grid-template-columns: 280px 280px; }
+}
+
+/* IMPORTANT: remove the default 40px figure margin */
+figure.square{ margin:0; }
+
+.square{
+  width:280px;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  border-radius:var(--radius);
+  background:#f5f5f7;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.square img{ width:100%; height:100%; object-fit:cover; display:block; }
+}
+.square img{ width:100%; height:100%; object-fit:cover; display:block; }
+  }
+  @media (min-width:700px){ .media-grid{ grid-template-columns:1fr 1fr; } }
+  .square{
+    aspect-ratio:1/1; overflow:hidden; border-radius:var(--radius);
+    background:#f5f5f7; border:1px solid var(--line); box-shadow:var(--shadow);
+  }
+  .square img{width:100%;height:100%;object-fit:cover;display:block}
+
+  blockquote{margin:18px 0;padding:16px;border-left:4px solid var(--accent);background:#f7faff;border-radius:12px}
+  blockquote cite{display:block;margin-top:8px;color:var(--muted);font-style:normal}
+
+  /* Release info list */
+  dl{margin:0;display:grid;grid-template-columns:120px 1fr;gap:10px 16px}
+  dt{font-weight:600;color:#1d1d1f}
+  dd{margin:0;color:#1d1d1f}
+  .nowrap{white-space:nowrap}
+  .track{white-space:nowrap}
+
+  /* Player + playlist */
+  #player-block audio{width:100%;height:36px;margin:8px 0 12px}
+  #playlist{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+  #playlist li{
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer;
+  }
+  #playlist li .name{font-weight:500}
+  #playlist li .time{color:var(--muted);white-space:nowrap}
+  #playlist li.active .name{color:var(--accent)}
+  .hint{font-size:13px;color:var(--muted);margin-top:8px}
+
+  /* Icon row */
+  .icons { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  .icon { width:28px; height:28px; color:#1d1d1f; display:inline-flex; }
+  .icon svg { width:100%; height:100%; display:block; }
+  .icon:hover { color: var(--accent); transform: translateY(-1px); }
+
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  footer{margin-top:28px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+  /* Giant play button (sidebar, 30% bigger, black) */
+  .giant-play{
+    width:114px; height:114px; border-radius:50%;
+    background:#000; color:#fff; border:1px solid #000;
+    box-shadow:var(--shadow); display:grid; place-items:center;
+    cursor:pointer; margin:0 0 16px 0;
+  }
+  .giant-play:hover{ transform:translateY(-1px); }
+  .giant-play:focus-visible{ outline:3px solid rgba(10,132,255,.4); outline-offset:2px; }
+  .giant-play svg{ width:54px; height:54px; }
+  .giant-play .icon-pause{ display:none; }
+  .giant-play.playing .icon-play{ display:none; }
+  .giant-play.playing .icon-pause{ display:block; }
+  .giant-play.center { margin:0 auto 16px; }
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicRelease",
+  "name": "Entry Level",
+  "recordLabel": { "@type": "Organization", "name": "Big Fear Records" },
+  "datePublished": "2025-09-05",
+  "image": "BF-21 (1).jpg",
+  "url": "https://www.bigfear.co.uk/entry-level",
+  "releaseOf": {
+    "@type": "MusicAlbum",
+    "name": "Entry Level",
+    "byArtist": { "@type": "MusicGroup", "name": "BIG FEAR" },
+    "numTracks": 4
+  }
+}
+</script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="label">Big Fear Records • Press Release</div>
+      <h1>BIG FEAR</h1>
+      <div class="subtitle">Entry Level — EP • Out 09 May 2026 </div>
+    </header>
+
+    <main class="grid">
+      <!-- LEFT: content -->
+      <div class="maincol">
+        <!-- Two images, same crop + corners -->
+        <div class="media-grid">
+          <figure class="square">
+            <img src="BF-21 (1).jpg" alt="BIG FEAR press photo" />
+          </figure>
+          <figure class="square">
+            <img src="career day.jpg" alt="BIG FEAR nine-panel press image" />
+          </figure>
+        </div>
+
+        <p class="lede">London trio BIG FEAR return with <em>Entry Level</em> — Their second EP with Charlie Andrew (Alt-J, Wolf Alice).</p>
+
+        <p>Big Fear—like Big Pharma, Big Tech, Big Dick— is a vaguely menacing and all-encompassing boogeyman; a reckoning with fear itself. The London trio explores the point where terror curdles into apathy. Self-reflexively dystopian and operatic, Big Fear’s songs are synth-throbbing generational anthems served with an almost ironic pomp.</p>
+
+        <p class="muted">“love love love this” — Emily Pilbeam, BBC Radio 6<br>
+          “Their best yet, massive.” — John Kennedy, Radio X<br>
+          “Keep your eye on this trio for big things in the future.” — Louder Than War<br>
+          “Big Fear are a powerhouse trio” — Earmilk</p>
+
+        <blockquote>
+          “The emerging three-piece blend indie rock tropes with unexpected moments of lucid pop energy, adding a dash of lyrical honesty for good value…. Live, Big Fear are a powerful force – led by asexual non-binary front person Alice Edwards, the group aim to do things differently.”
+          <cite>— CLASH</cite>
+        </blockquote>
+
+        <!-- Player + playlist (EP tracks only) -->
+        <section id="player-block" class="card">
+          <h2>Listen</h2>
+          <audio id="player" controls preload="none"></audio>
+          <ul id="playlist">
+            <li data-src="anger.mp3">
+              <span class="name">01 Anger</span><span class="time">02:44</span>
+            </li>
+            <li data-src="couriermail.mp3">
+              <span class="name">02 Courier Mail</span><span class="time">03:21</span>
+            </li>
+            <li data-src="darlingboy.mp3">
+              <span class="name">03 Darling Boy</span><span class="time">03:37</span>
+            </li>
+            <li data-src="tideoftheevening.mp3">
+              <span class="name">04 Tide of the Evening</span><span class="time">03:50</span>
+            </li>
+          </ul>
+         
+        </section>
+
+        <section class="card" style="margin-top:22px">
+          <h2>Release schedule</h2>
+          <ul>
+            <li>31.01.26 — Anger (single)</li>
+            <li>14.03.26 — Courier Mail (single)</li>
+            <li>11.04.26 — Darling Boy (single)</li>
+            <li>05.09.26 — Tide of the Evening (single)</li>
+          </ul>
+        </section>
+<section class="card" id="upcoming-shows" style="margin-top:22px">
+  <h2>Upcoming shows</h2>
+  <ul class="shows">
+    <li><strong>02 Oct</strong> — Scala <span class="muted">(Supporting The Howlers)</span></li>
+    <li><strong>25 Nov</strong> — Jaguar Shoes</li>
+    <li><strong>26 Nov</strong> — The Bullingdon</li>
+    <li><strong>10 Dec</strong> — The Hope &amp; Ruin <span class="muted">(Supporting The Winter Gardens)</span></li>
+  </ul>
+</section>
+
+      </div>
+
+      
+
+      <!-- RIGHT: stacked sidebar -->
+      <aside class="sidecol">
+        <!-- Giant Play (above Release info). Add class "center" to center it -->
+        <button id="giantPlay" class="giant-play center" aria-label="Play Anger">
+          <!-- Play icon -->
+          <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+            <polygon points="9,7 18,12 9,17" fill="currentColor"/>
+          </svg>
+          <!-- Pause icon -->
+          <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+            <rect x="8" y="7" width="3.2" height="10" fill="currentColor"/>
+            <rect x="12.8" y="7" width="3.2" height="10" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <section class="card">
+          <h2>Release info</h2>
+          <dl>
+            <dt>Label</dt><dd>Big Fear Records</dd>
+            <dt>Release</dt><dd class="nowrap">09 May 2026</dd>
+            <dt>Format</dt><dd>Digital EP</dd>
+            <dt>Tracklist</dt>
+            <dd>
+              <span class="track">01 Anger </span><br>
+              <span class="track">02 Courier Mail</span><br>
+              <span class="track">03 Darling Boy</span><br>
+              <span class="track">04 Tide of the Evening</span>
+            </dd>
+          </dl>
+        </section>
+
+        <section class="card">
+          <h2>Audio downloads</h2>
+       
+          <ul style="margin:6px 0 0 18px">
+            <li><a href="anger.mp3" download>Anger </a></li>
+            <li><a href="couriermail.mp3" download>Courier Mail</a></li>
+            <li><a href="darlingboy.mp3" download>Darling Boy </a></li>
+            <li><a href="tideoftheevening.mp3" download>Tide of the Evening </a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Media assets</h2>
+          <ul style="margin:6px 0 0 18px">
+       
+            <li><a href="BF-21 (1).jpg">Press photo</a></li>
+            <li><a href="career day.jpg">Alternate press image</a></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Listen / Follow</h2>
+          <nav class="icons" aria-label="Listen and follow">
+            <!-- Spotify -->
+            <a class="icon" href="https://open.spotify.com/artist/0rB1OW3G0q3Dfy5fVWF6mS?si=Z3jCtJ_1QNG8Q3dwS5RaLw" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M7 9c3-.8 7-.5 10 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 12c3-.6 6-.3 8 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 15c2.5-.5 4.5-.2 6 .6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a class="icon" href="https://www.instagram.com/_bigfear" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="4" ry="4"
+                      fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+              </svg>
+            </a>
+            <!-- Website -->
+            <a class="icon" href="https://www.bigfear.co.uk" target="_blank" rel="noopener" aria-label="Website" title="Website">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M2 12h20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"
+                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </nav>
+        </section>
+
+        <section class="card">
+          <h2>Contact</h2>
+          <p>Press & inquiries: <a href="mailto:info@bigfear.co.uk">info@bigfear.co.uk</a></p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>© 2025 Big Fear Records</footer>
+  </div>
+
+  <!-- Playlist logic + giant play control -->
+  <script>
+    (function () {
+      const player = document.getElementById('player');
+      const list = document.getElementById('playlist');
+      const giant = document.getElementById('giantPlay');
+      if (!player || !list) return;
+
+      function setActive(li){
+        [...list.children].forEach(x=>x.classList.remove('active'));
+        li.classList.add('active');
+      }
+
+      // Click in playlist
+      list.addEventListener('click', e => {
+        const li = e.target.closest('li[data-src]');
+        if(!li) return;
+        player.src = li.getAttribute('data-src');
+        setActive(li);
+        player.play().catch(()=>{});
+      });
+
+      // Auto-advance
+      player.addEventListener('ended', () => {
+        const items = [...list.querySelectorAll('li[data-src]')];
+        const idx = items.findIndex(li => li.classList.contains('active'));
+        const next = items[idx+1];
+        if (next) {
+          player.src = next.getAttribute('data-src');
+          setActive(next);
+          player.play().catch(()=>{});
+        } else if (giant) {
+          giant.classList.remove('playing');
+        }
+      });
+
+      // Sync giant button state
+      if (giant) {
+        player.addEventListener('play',  () => giant.classList.add('playing'));
+        player.addEventListener('pause', () => giant.classList.remove('playing'));
+
+        // Giant play: target first track (Anger), start at 0:00, toggle
+        giant.addEventListener('click', () => {
+          const anger = list.querySelector('li[data-src]'); // first track = Anger
+          if (!anger) return;
+          const angerSrc = anger.getAttribute('data-src');
+
+          if (!player.src || !player.src.includes(encodeURI(angerSrc))) {
+            player.src = angerSrc;
+            setActive(anger);
+          }
+          try { player.currentTime = 0; } catch(e) {}
+
+          if (player.paused) {
+            player.play().catch(()=>{});
+          } else {
+            player.pause();
+          }
+        });
+      }
+
+      // Load first track by default (no autoplay)
+      const first = list.querySelector('li[data-src]');
+      if(first){ player.src = first.getAttribute('data-src'); setActive(first); }
+    })();
+  </script>
+</body>
+</html>
